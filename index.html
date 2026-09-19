@@ -2,32 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Autoposter</title>
+  <title>Autoposter — Automated Short-Form Video Publishing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Autoposter schedules and automatically cross-posts short-form video clips to TikTok, Instagram, and YouTube.">
+  <!-- Mismo ícono usado en TikTok Basic Info -->
+  <link rel="icon" type="image/png" href="icon.png">
+  <style>
+    body { font-family: sans-serif; max-width: 760px; margin: 0 auto; line-height: 1.6; padding: 0 20px 60px; color: #1a1a1a; }
+    header { padding: 40px 0 20px; display: flex; align-items: center; gap: 16px; }
+    header img { width: 56px; height: 56px; border-radius: 12px; }
+    header .title-block h1 { margin-bottom: 4px; }
+    .tagline { color: #555; font-size: 1.1em; }
+    section { margin-top: 40px; }
+    .steps { counter-reset: step; list-style: none; padding: 0; }
+    .steps li { counter-increment: step; margin-bottom: 16px; padding-left: 40px; position: relative; }
+    .steps li::before { content: counter(step); position: absolute; left: 0; top: 0; background: #1a1a1a; color: #fff; width: 26px; height: 26px; border-radius: 50%; text-align: center; line-height: 26px; font-size: 0.9em; }
+    .features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 0; list-style: none; }
+    .features li { background: #f5f5f5; padding: 14px 16px; border-radius: 8px; }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee; color: #777; font-size: 0.9em; }
+    a { color: #0a5cff; }
+  </style>
 </head>
-<body style="font-family: sans-serif; max-width: 700px; margin: 40px auto; line-height: 1.6; padding: 0 20px;">
-  <h1>Autoposter</h1>
-  <p>
-    Autoposter is a content publishing tool that helps creators schedule and
-    automatically cross-post their short-form video clips to TikTok,
-    Instagram, and YouTube.
-  </p>
-  <p>
-    It connects to each platform's official API using the standard OAuth 2.0
-    authorization flow, and publishes video content only to the account that
-    explicitly authorized the connection.
-  </p>
+<body>
+  <header>
+    <img src="icon.png" alt="Autoposter icon">
+    <div class="title-block">
+      <h1>Autoposter</h1>
+      <p class="tagline">Automated short-form video publishing for content creators.</p>
+    </div>
+  </header>
 
-  <h2>Legal</h2>
-  <ul>
-    <li><a href="privacy.html">Privacy Policy</a></li>
-    <li><a href="terms.html">Terms of Service</a></li>
-  </ul>
+  <section>
+    <h2>What it does</h2>
+    <p>
+      Autoposter schedules and automatically cross-posts short-form video
+      clips to TikTok, Instagram, and YouTube on behalf of the creator who
+      authorizes it. It replaces manually uploading each clip through every
+      individual app, letting creators focus on making content instead of
+      repeating the same upload steps across platforms.
+    </p>
+  </section>
 
-  <h2>Contact</h2>
-  <p>
-    Questions about this tool can be directed through its
-    <a href="https://github.com/gk1wi">GitHub profile</a>.
-  </p>
+  <section>
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li>The creator connects their TikTok, Instagram, and/or YouTube account using each platform's official OAuth 2.0 login flow.</li>
+      <li>The creator uploads their edited video clips to a private content queue.</li>
+      <li>On a fixed schedule, Autoposter selects a clip and publishes it directly to the connected platform(s) using each platform's official publishing API.</li>
+      <li>Once a clip is successfully published, it is removed from the queue automatically.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Features</h2>
+    <ul class="features">
+      <li>Scheduled, automatic publishing</li>
+      <li>Official OAuth 2.0 authorization per platform</li>
+      <li>Per-platform enable/disable control</li>
+      <li>No manual re-uploading required</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Legal</h2>
+    <ul>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Service</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Questions? Reach out through the <a href="https://github.com/gk1wi">developer's GitHub profile</a>.</p>
+  </footer>
 </body>
 </html>
